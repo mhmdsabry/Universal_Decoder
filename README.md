@@ -16,6 +16,10 @@ Another important aspect of Universal Transformers is adaptive computation time 
 
 I have implemented a decoder-only version of Universal Transformers, which, as previously mentioned, consists essentially of a decoder layer with a recurrence. The control of how many times we should recur for each token is managed by the adaptive computation time (ACT) unit. This is the main modification from the paper. Additionally, we tested this architecture on the Tiny Shakespeare dataset, famously used by Andrej Karpathy for next character prediction. We compare this Universal Decoder against a vanilla decoder (GPT style) with 6 layers, where for the Universal Decoder the equivalent is allowing the same number for recurrence. Further details about the architecture can be found in the config file.
 
+Based on our configs we got:
+- Vanilla Model parameters: 24M
+- UT decoder model parameters: 8.3M
+
 The experiment is straightforward: train these two models for next character prediction and monitor the differences.
 
 ## Results
