@@ -1,0 +1,12 @@
+{
+  "filename": "config.ini",
+  "context_size": 512,
+  "num_generated_tokens": 300,
+  "act": false,
+  "ponder_penalty": 0.0,
+  "train_batch_size": 128,
+  "eval_batch_size": 64,
+  "epoch": 15,
+  "learning_rate": 0.0003,
+  "seed": 42
+}
