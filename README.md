@@ -20,12 +20,12 @@ The experiment is straightforward: train these two models for next character pre
 
 ## Results
 ### Loss:
-![Loss](./assets/ut_vanilla_loss)
+![Loss](./assets/ut_vanilla_loss.png)
 
 ### Ponder Time for Next Token prediction:
 "ponder time" is a term used in the paper that refers to the computation time allocated for each input. In the case of vanilla transformers, the ponder time is fixed and equals the number of layers; hence, all tokens must undergo computation across all six layers. However, for the Universal Decoder, the ponder time is flexible and ideally depends on the problem's difficulty (assuming effective learnability).
 During the training of the Universal Decoder, after every 1000 iterations, I assess the model by unconditionally generating 300 tokens. I observed that more computation is allocated to generating the initial tokens, and as the generation progresses, less computation is allocated, eventually stabilising at a specific number. This behaviour is illustrated in the figure below.
-![tokens_ponder_time](./assets/tokens_ponder_time)
+![tokens_ponder_time](./assets/tokens_ponder_time.png)
 
 
 
